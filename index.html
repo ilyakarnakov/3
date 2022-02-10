@@ -7,17 +7,18 @@
       rel="stylesheet">
 		<link href="styles/style.css" type="text/css" rel="stylesheet">
 		<link href="styles/circe.css" type="text/css" rel="stylesheet">
+		<script src="scripts/script.js" defer></script>
 	</head>
 	<body>
 		<main class="main">
 			<div class="product-card main__product-card">
 				<div class="product-card__images-wrap">
-					<div class="product-card__small-images">
+					<div class="product-card__small-images-wrap">
 						<img class="product-card__product-small-image" src="images/1.png">
 						<img class="product-card__product-small-image" src="images/2.png">
 						<img class="product-card__product-small-image" src="images/3.png">
 					</div>
-					<div class="product-card__main-image">
+					<div class="product-card__main-image-wrap">
 						<img class="product-card__product-main-image" src="images/big.jpg">
 					</div>
 				</div>
@@ -38,9 +39,18 @@
 						<div class="product-card__shop">В наличии в магазине <a href="#">Lamoda</a></div>
 						<div class="product-card__free-delivery">Бесплатная доставка</div>
 					</div>
-					<div class="product-card__buttons-wrap">
-						<input class="product-card__button" type="button" value="В магазин">
-						<input class="product-card__button product-card__button-mark" type="button" value="В избранное">
+					<div class="counter product-card__counter">
+						<button class="counter__button counter__button_disable" id="counter_remove">
+							<span class="material-icons">remove</span>
+						</button>
+						<input type="number" class="counter__input" id="counter" value="1" readonly>
+						<button class="counter__button" id="counter_add">
+							<span class="material-icons">add</span>
+						</button>
+					</div>
+					<div class="buttons-wrap product-card__buttons-wrap">
+						<button class="button buttons-wrap__button">Купить</button>
+						<button class="button button_white">В избранное</button>
 					</div>
 					<div class="product-card__description">
 						Рубашка Medicine выполнена из вискозной ткани с клетчатым узором. Детали: прямой крой; отложной воротник; планка и манжеты на пуговицах; карман на груди.
