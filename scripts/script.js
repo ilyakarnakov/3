@@ -79,9 +79,18 @@ document.addEventListener('DOMContentLoaded', () => {
 	//Вывод сообщения через jQuery NotifIt Plugin
 	document.querySelector('#button-buy').addEventListener('click', () => {
 		let valueCounter = Number(inputCounter.getAttribute('value'))
+		let msg = "В корзину добавлено " + valueCounter + " товаров!"
+
+		if (valueCounter % 10 === 1 && valueCounter != 11){
+			msg = "В корзину добавлен " + valueCounter + " товар!"
+		}
+		else if ([2,3,4].includes(valueCounter % 10) && ![12,13,14].includes(valueCounter)){
+			msg = "В корзину добавлено " + valueCounter + " товара!"
+		}
+
 		notif({
 			type: "success",
-			msg: "В корзину добавлено " + valueCounter + " товаров!",
+			msg: msg,
 			position: "center",
 			fade: true
 		});
