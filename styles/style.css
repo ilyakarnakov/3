@@ -38,6 +38,7 @@ a, a:active, a:hover, a:visited{
 .product-card__product-small-image{
 	width: 90px;
 	display: block;
+	cursor: pointer;
 }
 .product-card__product-small-image:not(:first-of-type){
 	margin-top: 20px;

@@ -3,23 +3,31 @@
 	<head>
 		<title></title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
+      <link href="styles/notifIt.css" rel="stylesheet" type="text/css" >
+      <link href="styles/circe.css" type="text/css" rel="stylesheet">
 		<link href="styles/style.css" type="text/css" rel="stylesheet">
-		<link href="styles/circe.css" type="text/css" rel="stylesheet">
+		
+		<script src="scripts/jquery.min.js" defer></script>
+		<script src="scripts/notifIt.js" defer></script>
 		<script src="scripts/script.js" defer></script>
+
+		
+	
 	</head>
 	<body>
 		<main class="main">
 			<div class="product-card main__product-card">
 				<div class="product-card__images-wrap">
 					<div class="product-card__small-images-wrap">
-						<img class="product-card__product-small-image" src="images/1.png">
-						<img class="product-card__product-small-image" src="images/2.png">
-						<img class="product-card__product-small-image" src="images/3.png">
+						<img class="product-card__product-small-image" src="images/22.jpg">
+						<img class="product-card__product-small-image" src="images/33.jpg">
+						<img class="product-card__product-small-image" src="images/44.jpg">
 					</div>
 					<div class="product-card__main-image-wrap">
-						<img class="product-card__product-main-image" src="images/big.jpg">
+						<img class="product-card__product-main-image" src="images/11_big.jpg">
 					</div>
 				</div>
 				<div class="product-card__details">
@@ -40,16 +48,16 @@
 						<div class="product-card__free-delivery">Бесплатная доставка</div>
 					</div>
 					<div class="counter product-card__counter">
-						<button class="counter__button counter__button_disable" id="counter_remove">
+						<button class="counter__button counter__button_disable" id="counter-remove">
 							<span class="material-icons">remove</span>
 						</button>
 						<input type="number" class="counter__input" id="counter" value="1" readonly>
-						<button class="counter__button" id="counter_add">
+						<button class="counter__button" id="counter-add">
 							<span class="material-icons">add</span>
 						</button>
 					</div>
 					<div class="buttons-wrap product-card__buttons-wrap">
-						<button class="button buttons-wrap__button">Купить</button>
+						<button class="button buttons-wrap__button" id="button-buy">Купить</button>
 						<button class="button button_white">В избранное</button>
 					</div>
 					<div class="product-card__description">
@@ -65,7 +73,7 @@
 					</div>
 				</div>
 			</div>
-		
+
 		</main>
 	</body>
 </html>
