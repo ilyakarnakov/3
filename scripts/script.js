@@ -1,9 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
-	const mImgPath = 'images/11_big.jpg'
-	//Путь главной большой картинки
+	
 	//Все картинки слайдера должны быть в формате .jpg
 	//Больная картинка = маленькая картинка + '_big'
-	
+	//Путь главной большой картинки
+	const mImgPath = 'images/11_big.jpg'
 
 	//Название большой картинки состоит из: название маленькой картинки + "_big"
 	document.querySelectorAll('.product-card__product-small-image').forEach((item) => {
