@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	//Если при первой загрузке значение выходит за предел ставим 1
 	let valueCounter = Number(inputCounter.getAttribute('value'))
-	if (valueCounter > maxValue || valueCounter < minValue){
+	if (!valueCounter || valueCounter > maxValue || valueCounter < minValue || !Number.isInteger(valueCounter)){
 			inputCounter.setAttribute('value', 1)
 			setStyleCounter()
 		}
@@ -58,10 +58,15 @@ document.addEventListener('DOMContentLoaded', () => {
 	//По нажатию кнопки +1 к значению
 	counterAdd.addEventListener('click', () => {
 		let valueCounter = Number(inputCounter.getAttribute('value'))
+		if (valueCounter && Number.isInteger(valueCounter)){
+		
+			if (valueCounter < maxValue)
+				inputCounter.setAttribute('value', valueCounter + 1)
 
-		if (valueCounter < maxValue)
-			inputCounter.setAttribute('value', valueCounter + 1)
-
+			
+			}else{
+				inputCounter.setAttribute('value', 1)
+			}
 		setStyleCounter()
 	})
 
@@ -69,10 +74,14 @@ document.addEventListener('DOMContentLoaded', () => {
 	counterRemove.addEventListener('click', () => {
 
 		let valueCounter = Number(inputCounter.getAttribute('value'))
+		if (valueCounter && Number.isInteger(valueCounter)){
 
-		if (valueCounter > minValue)
-			inputCounter.setAttribute('value', valueCounter - 1)
+			if (valueCounter > minValue)
+				inputCounter.setAttribute('value', valueCounter - 1)
 
+		}else{
+			inputCounter.setAttribute('value', 1)
+		}
 		setStyleCounter()
 	})
 
@@ -93,7 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			msg: msg,
 			position: "center",
 			fade: true
-		});
+		})
 	})
 
 
